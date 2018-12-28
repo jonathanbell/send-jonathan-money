@@ -2,6 +2,7 @@
   "name": "send-jonathan-money",
   "version": "0.0.1",
   "description": "Send Jonathan Bell money online via the Stripe API",
+  "homepage": "https://github.com/jonathanbell/send-jonathan-money#readme",
   "main": "start.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,6 +19,13 @@
     "money",
     "cash"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanbell/send-jonathan-money.git"
+  },
+  "engines": {
+    "node": ">=8.0.0 <=9.11.2"
+  },
   "author": "Jonathan Bell",
   "license": "WTFPL",
   "dependencies": {
