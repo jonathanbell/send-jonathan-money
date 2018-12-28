@@ -1,6 +1,6 @@
 # Send Jonathan Money
 
-I wanted to get to know the Stripe API so I made this web app. You can use it to send me money (thanks).
+I wanted to get to know the Stripe API so I made this web app. You can [use it to send me money](https://send-jonathan-money.herokuapp.com/) (thanks).
 
 ## Uses:
 

@@ -24,7 +24,8 @@
     "url": "https://github.com/jonathanbell/send-jonathan-money.git"
   },
   "engines": {
-    "node": ">=8.0.0 <=9.11.2"
+    "node": ">=8.0.0 <=9.11.2",
+    "npm": "6.x"
   },
   "author": "Jonathan Bell",
   "license": "WTFPL",

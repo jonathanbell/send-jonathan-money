@@ -60,8 +60,15 @@
     // Leave this here. These vars can be used (globally) by either payment method.
     const stripe = Stripe('pk_live_oiWbZFlSQeUoT9WHpyAoXmM2'); // https://stripe.com/docs/keys
     const elements = stripe.elements();
+
     // One way data binding for heading.
     const mainHeading = document.querySelectorAll('h1')[0];
+
+    // "Clear"/refresh the page when we click on a flash message.
+    const flashes = document.querySelectorAll('.flashes');
+    flashes.forEach(flash => flash.addEventListener('click', () => {
+      location.reload();
+    }));
   </script>
 
   <script src="/payment-form.js"></script>

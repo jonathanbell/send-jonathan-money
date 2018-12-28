@@ -61,6 +61,7 @@ small {
 .flash {
   border: 1px dashed lightgrey;
   padding: 1rem;
+  cursor: pointer;
 }
 .info.flash {
   background: lightblue;
