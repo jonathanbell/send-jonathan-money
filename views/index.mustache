@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Jonathan Bell <jonathanbell.ca@gmail.com>">
+
+  <title>Send Jonathan Bell Money</title>
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+
+  <h1>Send Me (Jonathan) Money <span title="Send money to Jonathan Bell">💸</span></h1>
+
+  {{{flash}}}
+
+  <label for="userEmail">If you'd like a receipt, please enter your email:</label>
+  <br />
+  <input class="full-width" placeholder="billy@billyjoe.com" type="text" id="userEmail" />
+
+  <label for="amount">The amount you'd like to send in <a href="https://www.xe.com/currency/cad-canadian-dollar" rel="noopener" target="_blank">CAD</a>:</label>
+  <br />
+  <input class="full-width" required placeholder="$1,000" min="2" type="number" id="amount" />
+  <small style="position: relative; top: -2px;">Amount will be rounded to the nearest dollar.</small>
+
+  <form action="/" method="post" id="payment-form">
+    <div class="form-row">
+      <label for="card-element">Enter your card number:</label>
+      <div id="card-element">
+        <!-- A Stripe Element will be inserted here. -->
+      </div>
+      <!-- Used to display form errors. -->
+      <div id="card-errors" role="alert"></div>
+    </div>
+
+    <button id="submitButton" type="submit">Send $$$</button>
+  </form>
+
+  <div id="payment-request-button-wrapper">
+    <h2>OR, send me $20 right away...</h2>
+    <div id="payment-request-button">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+    <small>Click "Pay now" above to send me $20 right away.</small>
+  </div>
+
+  <hr />
+
+  <footer>
+    <small>Hey, <em>this ain't no joke</em>. Clicking "Pay now" or "Send $$$" above will send <a href="https://github.com/jonathanbell" target="_blank" rel="noopener">Jonathan Bell</a> real (non-refundable) money.</small>
+  </footer>
+
+  <script>
+    // Create the Stripe client.
+    // Leave this here. These vars can be used (globally) by either payment method.
+    const stripe = Stripe('pk_live_oiWbZFlSQeUoT9WHpyAoXmM2'); // https://stripe.com/docs/keys
+    const elements = stripe.elements();
+    // One way data binding for heading.
+    const mainHeading = document.querySelectorAll('h1')[0];
+  </script>
+
+  <script src="/payment-form.js"></script>
+  <script src="/payment-request.js"></script>
+
+</body>
+</html>

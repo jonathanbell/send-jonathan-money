@@ -1,0 +1,38 @@
+{
+  "name": "send-jonathan-money",
+  "version": "0.0.1",
+  "description": "Send Jonathan Bell money online via the Stripe API",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon ./start.js --ignore public/",
+    "dev": "concurrently \"npm run watch\"",
+    "start": "node ./start.js"
+  },
+  "private": true,
+  "keywords": [
+    "Stripe",
+    "Jonathan",
+    "Bell",
+    "send",
+    "money",
+    "cash"
+  ],
+  "author": "Jonathan Bell",
+  "license": "WTFPL",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "cookie-parser": "1.4.3",
+    "dotenv": "6.2.0",
+    "express": "4.16.4",
+    "express-flash-notification": "0.5.0",
+    "express-session": "1.15.6",
+    "mustache-express": "1.2.8",
+    "stripe": "6.20.0",
+    "validator": "10.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "4.1.0",
+    "nodemon": "1.18.9"
+  }
+}
